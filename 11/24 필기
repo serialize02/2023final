@@ -5,3 +5,21 @@
 hugging face 3가지 종류: 텍스트, 음성, 이미지 
 둘 이상이 합쳐진걸 multi model 이라 부르지만, 대부분 3가지 데이터로 집약된다. 
 ner named entity recognition 
+토큰은 단어라고 생각하면 됨 
+데이터의 종류는 크게 두 가지 (numerical 숫자 continuous)-키, 몸무게 , 숫자 아닌거 non-numerical, discrete-label 고대생, 연대생 
+classification 에서는 입력에 뭐가 들어가든 label 이 출력됨 
+꽃인데 무슨 꽃이다? 해바라기, 라일락,,, -> 입력으로 들어가는 부분은 numerical 사진이라면 픽셀 정보가 모두 숫자이기 때문 
+이 숫자들을 기반으로 label 해주는거 
+출력부분이 숫자가 나오는 경우도 있는데, 이 경우 입력도 대부분 숫자 -> regression 
+regression의 예시: x축이 커피, y축이 잠의 양일 때, 이 상관관계에 따라 한 점이 찍힐 것이고, 50명의 결과를 다 찍어보면 어떤 흐름이 나타날 것임 
+출력 값이 numerical 이 나오면 regression 
+그러나, x축이 커피 intake 가 들어가고 성인이냐, 아동이냐 라는 분류가 들어가면 이건 classification의 문제가 됨/ 출력 부분이 discrete 하고 예측하게 나오면 
+입력과 출력이 있는 것을 supervised learning 이라고 함 '지도 학습' (숫자 세트가 두개) 
+이런 입력일 때 이런 name, 숫자를 가져라 guide 
+unsupervised leaning '비지도학습' 은 숫자 세트만 하나가 있고 입출력이 없음 
+지도와 비지도 학습의 차이점은 지도학습은 출력이 반드시 존재한다는 점 
+비지도 학습은 그냥 한 세트의 데이터가 있는데, 거기에서 grouping, classification을 한다 생각하면 됨 
+집의 방의 개수, 세금, 얼마나 오래됐는지 의 정보가 입력되어 -> 집의 가격이 출력 되는 경우, 리그레션 왜냐? numerical한 집의 가격이 output 
+같은 입력에 -> 성북구집, 광화문집, 강남집 이렇게 discrete하게 나오면 이건 classification 
+예를 들어, classification 데이터를 하나 가져와서 모델을 만들 떄, 모델이 하는 일은 어떤 입력이 들어가면 이게 뭔지 예측을 해주는 역할 
+데이터 자체는 모델이 없고 데이터로 어떤 모델을 훈련시키는 것임 (어떤 데이터로부터 어떤 모델을 train 한다) 
